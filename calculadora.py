@@ -1,4 +1,4 @@
-def sumar (a,b):
+def resta (a,b):
     """
     Parameters
     ----------
@@ -10,10 +10,12 @@ def sumar (a,b):
     Returns
     -------
         la suma de a  y b
-    """
-    return a + b
 
+    """
+    return a - b
 
 if __name__ == '__main__':
-    print(sumar(2,3))
-
+    import doctest
+    doctest.testmod()
+    print(sumar(4,5))
+    print(resta(4,5))
