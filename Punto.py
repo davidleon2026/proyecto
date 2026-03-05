@@ -23,6 +23,9 @@ class Punto:
         if self.x < 0 and self.y < 0:
             return 3
         return 4
+    def medio(self, Q):
+        if isinstance(Q,Punto):
+            return Punto
 
 if __name__ == '__main__':
     P = Punto(0, 0) #valores aleatorio
@@ -35,4 +38,4 @@ if __name__ == '__main__':
     try:
             print(P.distancia(2))
     except NotImplementedError as e:
-        print(e)
+        print(f"error:{e}")
