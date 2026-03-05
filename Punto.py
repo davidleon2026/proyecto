@@ -25,7 +25,9 @@ class Punto:
         return 4
     def medio(self, Q):
         if isinstance(Q,Punto):
-            return Punto
+            return Punto((self.x + Q.x)//2,
+                         (self.y + Q.y)//2)
+        raise NotImplementedError("Punto no valido")
 
 if __name__ == '__main__':
     P = Punto(0, 0) #valores aleatorio
@@ -39,3 +41,6 @@ if __name__ == '__main__':
             print(P.distancia(2))
     except NotImplementedError as e:
         print(f"error:{e}")
+    R= print(P.medio(Q)
+    print(type(R))
+    print(R.x, R.y))
