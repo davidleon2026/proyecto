@@ -26,7 +26,15 @@ class Recta:
 
         def interseccion(self, R2):
             pass
-        def distancia(self, R2):
+        def distancia(self, P):
+            if self.pasa(P):
+                return 0
+            perp= self.perpendicular(P)
+            self.interseccion(perp)
+            pint= self.interseccion(perp)
+            return P.distancia(pint)
+            pass
+        def pasa(self, P):
             pass
 
         if __name__ == "__main__":
