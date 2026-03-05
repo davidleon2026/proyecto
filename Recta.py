@@ -18,8 +18,15 @@ class Recta:
             raise TypeError("Punto incorreto")
 
         def m(self):
-            return (self.P1.y - self.P2.y) / (self.P1.x - self.P2.x)
+            return ((self.P1.y - self.P2.y) / (self.P1.x - self.P2.x))
         def b(self):
+            pass
+        def perpendicular(self, P):
+            pass
+
+        def interseccion(self, R2):
+            pass
+        def distancia(self, R2):
             pass
 
         if __name__ == "__main__":
