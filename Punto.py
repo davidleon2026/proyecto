@@ -44,3 +44,32 @@ if __name__ == '__main__':
     R= print(P.medio(Q)
     print(type(R))
     print(R.x, R.y))
+
+    def __str__(self):
+        """
+        >>> R1 = Punto(0, 0)
+        >>> print(R1)
+        (0, 0)
+        :param self:
+        :return:
+        """
+        return f"(: {self.x}, {self.y})"
+    def __eq__(self, other):
+        """
+
+        :param other:
+        :return:
+        >>> R1 = Punto(0, 0)
+        >>> R2 = Punto(0, 0)
+        >>> print(R1 == R2)
+        True
+        >>>R3 = Punto(1, 0)
+        >>>R1 == R3
+        False
+        >>> R1 != R3
+        True
+        """
+        return self.x == other.x and self.y == other.y
+if __name__ == "__main__":
+    import doctest
+    print(doctest.testmod(verbose=True))
