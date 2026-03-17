@@ -24,8 +24,9 @@ class Recta:
         def perpendicular(self, P):
             pass
 
-        def interseccion(self, R2):
-            pass
+        def interseccion(self, P):
+            try:
+
         def distancia(self, P):
             if self.pasa(P):
                 return 0

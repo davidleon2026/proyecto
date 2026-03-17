@@ -41,9 +41,9 @@ if __name__ == '__main__':
             print(P.distancia(2))
     except NotImplementedError as e:
         print(f"error:{e}")
-    R= print(P.medio(Q)
+    R= print(P.medio(Q))
     print(type(R))
-    print(R.x, R.y))
+    print(R.x, R.y)
 
     def __str__(self):
         """
