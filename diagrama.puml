@@ -1,0 +1,45 @@
+@startuml
+class Tienda {
+   +ofertar(Ordenador, Componente)
+}
+class UnidadCentral {
+}
+class Ordenador {
+  +añadir(Componente)
+  +quitar(Componente)
+  +cambiar(Componente)
+  +precio(): float
+}
+class Componente {
+    + añadir(Componente)
+}
+class Periférico {
+}
+class DispositivoEntrada {
+}
+class DispositivoSalida {
+}
+class Cliente {
+     + pedir(Ordenador, Componente)
+     + compra(Ordenador) : Factura
+}
+
+class Compra {
+}
+class Factura {
+}
+
+
+Ordenador o-- "1" UnidadCentral : agregación
+Ordenador o-- "1..*" DispositivoEntrada : agregación
+Ordenador o-- "1..*" DispositivoSalida : agregación
+Componente <|-u- UnidadCentral : herencia
+Componente <|-- Periférico : herencia
+Periférico <|-- DispositivoEntrada : herencia
+Periférico <|-- DispositivoSalida : herencia
+Tienda o-- Ordenador : catalogo
+Cliente *-- "1..*" Compra : composición
+
+@enduml
+
+
